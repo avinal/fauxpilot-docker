@@ -21,7 +21,7 @@ jobs:
           password: ${{ github.token }}
 
       - name: Build the lark Docker image
-        run: docker build https://github.com/moyix/fauxpilot.git#:converter --tag $IMAGE_NAME
+        run: docker build https://github.com/moyix/fauxpilot.git#main:converter --tag $IMAGE_NAME
 
       - name: Push lark to GitHub Container Registry
         run: docker push $IMAGE_NAME
